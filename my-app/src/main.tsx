@@ -6,14 +6,15 @@ import Cards from './Cards.tsx'
 import Footer from './Footer.tsx'
 import Twomoney from './assets/images/2MoneyLogo.png'
 import Offbeat from './assets/images/offbeat.png'
+import Reactlogo from './assets/images/react-learning.jpg'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <div className="app">
-        <div>
+      <div>
         <h1 className="title" style={{ color: 'orange', fontStyle: 'italic' }}>Welcome to My React App</h1>
         <p className="description">This is a simple React application.</p>
-        </div>
+      </div>
       <main className="content">
 
         <Cards
@@ -34,8 +35,25 @@ createRoot(document.getElementById('root')!).render(
           button="on"
           onClick={() => window.open('https://github.com/Eduard0-code/Projeto-final-de-Desenvolvimento-Web', '_blank')}
         />
+        <Cards
+          title='Project 3 - My Portfolio'
+          text='This is my personal portfolio website, where I showcase my projects and skills. It is built with React and styled with CSS.'
+          thumbnail={Reactlogo}
+          style={{ backgroundColor: 'darkgreen', width: '40%' }}
+          buttonTitle="Github Repo"
+          button="on"
+          onClick={() => window.open('https://github.com/Eduard0-code/React-Learning-Portfolio', '_blank')}
+        />
+        <Cards
+          title='Project 4 - Coming Soon'
+          text='This is a placeholder for my future project. I am currently working on a new ideia. It consists of a simple web application, that will work as a playlist for exercises, it autoplays your workouts with a timer.'
+          thumbnail={Reactlogo}
+          style={{ backgroundColor: 'darkred', width: '40%' }}
+          buttonTitle="Github Repo"
+          button="off"
+        />
       </main>
-        <ButtonOne />
+      <ButtonOne />
       <Footer />
     </div>
   </StrictMode>,
